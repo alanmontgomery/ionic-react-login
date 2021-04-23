@@ -9,7 +9,7 @@ An example of a Login / Sign up flow with form validation
 * Generic form validation
 * Error messages
 * Welcome/Login/Signup pages
-* Custom animations
+* Animations
 * SASS Modules
 * Ionic CSS utilities
 
