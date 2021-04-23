@@ -2,12 +2,40 @@ import { IonBackButton, IonButton, IonButtons, IonCardTitle, IonCol, IonContent,
 import styles from './Login.module.scss';
 
 import { arrowBack, shapesOutline } from "ionicons/icons";
-import { CustomField } from '../components/CustomField';
-import { loginFields } from '../data/fields';
+import CustomField from '../components/CustomField';
+import { useLoginFields } from '../data/fields';
 import { Action } from '../components/Action';
 import { Wave } from '../components/Wave';
+import { useEffect, useState } from 'react';
+import { validateForm } from '../data/utils';
+import { useParams } from 'react-router';
 
 const Login = () => {
+    
+    const params = useParams();
+
+    const fields = useLoginFields();
+    const [ errors, setErrors ] = useState(false);
+
+    const login = () => {
+
+        const errors = validateForm(fields);
+        setErrors(errors);
+
+        if (!errors.length) {
+
+            //  Submit your form here
+        }
+    }
+
+    useEffect(() => {
+
+        return () => {
+
+            fields.forEach(field => field.input.state.reset(""));
+            setErrors(false);
+        }
+    }, [params]);
 
 	return (
 		<IonPage className={ styles.loginPage }>
@@ -37,12 +65,12 @@ const Login = () => {
                     <IonRow className="ion-margin-top ion-padding-top">
                         <IonCol size="12">
 
-                            { loginFields.map(field => {
+                            { fields.map(field => {
 
-                                return <CustomField field={ field } />;
+                                return <CustomField field={ field } errors={ errors } />;
                             })}
 
-                            <IonButton className="custom-button" expand="block">Login</IonButton>
+                            <IonButton className="custom-button" expand="block" onClick={ login }>Login</IonButton>
                         </IonCol>
                     </IonRow>
                 </IonGrid>
