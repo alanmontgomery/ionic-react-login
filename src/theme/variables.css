@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+
+font-family: 'Roboto', sans-serif;
+}
 /* Ionic Variables and Theming. For more info, please see:
 http://ionicframework.com/docs/theming/ */
 
@@ -76,7 +82,7 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-light-tint: #f5f6f9;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   /*
    * Dark Colors
    * -------------------------------------------
@@ -233,4 +239,37 @@ http://ionicframework.com/docs/theming/ */
 
     --ion-card-background: #1e1e1e;
   }
+}
+
+:root {
+
+  --ion-background-color: #7c3b6a;
+  --ion-text-color: white;
+  --ion-tab-bar-background: #7c3b6a;
+  --ion-toolbar-background: #7c3b6a;;
+  --ion-toolbar-color: white;
+}
+
+.custom-link {
+
+  color: rgb(236, 149, 35);
+}
+
+.custom-back {
+
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.custom-button {
+
+  --border-radius: 5px !important;
+  --background: rgb(236, 149, 35);
+  --background-activated: rgb(192, 125, 38);
+  --background-focused: rgb(192, 125, 38);
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }

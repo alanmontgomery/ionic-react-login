@@ -21,20 +21,32 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Signup from './pages/Signup';
+import Login from './pages/Login';
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
+const App = () => (
+	<IonApp>
+		<IonReactRouter>
+			<IonRouterOutlet>
+				
+				<Route exact path="/home">
+					<Home />
+				</Route>
+
+				<Route exact path="/signup">
+					<Signup />
+				</Route>
+
+				<Route exact path="/login">
+					<Login />
+				</Route>
+
+				<Route exact path="/">
+					<Redirect to="/home" />
+				</Route>
+			</IonRouterOutlet>
+		</IonReactRouter>
+	</IonApp>
 );
 
 export default App;
