@@ -1,46 +1,108 @@
-
-
 .homePage {
-
-    ion-header {
-
-        ion-img {
-
-            border-bottom: 3px solid rgb(236, 149, 35);
-        }
+  ion-header {
+    ion-img {
+      border-bottom: 3px solid rgb(236, 149, 35);
     }
+  }
 
-    ion-footer {
-
-        background-color: #7c3b6a;
-        color: white;
-    }
+  ion-footer {
+    background-color: #7c3b6a;
+    color: white;
+  }
 }
 
 .getStarted {
-
-    height: 100%;
-    background-color: #ffffff;
-    background-image: radial-gradient(#b8b8b8 1px, transparent 1px),
+  height: 100%;
+  background-color: #ffffff;
+  background-image: radial-gradient(#b8b8b8 1px, transparent 1px),
     radial-gradient(#b8b8b8 1px, #ffffff 1px);
-    background-size: 40px 40px;
-    background-position: 0 0, 20px 20px;
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
 
-     ion-card-title {
-
-        color: black !important;
-        letter-spacing: -0.08rem;
-        font-weight: 900 !important;
-     }
+  ion-card-title {
+    color: black !important;
+    letter-spacing: -0.08rem;
+    font-weight: 900 !important;
+  }
 }
 
 .heading {
-
-    margin-top: 7rem;
+  margin-top: 7rem;
 }
 
 .getStartedButton {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
 
-    font-size: 1.2rem;
-    margin-top: 1rem;
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexEnd {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.submit {
+  padding: 20px 0 30px 0;
+}
+
+/* CSS */
+.ButtonAnswer {
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+.ButtonAnswer:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+.ButtonAnswer:active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  transform: scale(.96);
+}
+
+.ButtonAnswer:disabled {
+  border-color: #DDDDDD;
+  color: #DDDDDD;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+
+.padding {
+  padding-left: 20px;
 }

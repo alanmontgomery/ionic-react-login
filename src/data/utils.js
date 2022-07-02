@@ -40,3 +40,7 @@ export const validateForm = (fields) => {
 
   return errors;
 };
+
+export function getRandomInt(list) {
+  return list[Math.floor(Math.random() * list.length)];
+}
